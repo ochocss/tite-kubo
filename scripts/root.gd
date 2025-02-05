@@ -20,18 +20,12 @@ var inimigo : Sprite2D
 func _ready():
 	grid_container = grid_container_preload.instantiate()
 	add_child(grid_container)
-	var stt : String
 	
 	for i in range(81):
 		var block = block_node.instantiate()
 		var resource = load("res://resources/block" + str(RandomNumberGenerator.new().randi_range(1, 9)) + ".tres")
 		block.set_resource(resource)
 		
-		if i % 9 == 0 || i == 80: 
-			print(stt)
-			stt = ""
-		
-		stt = stt + " " + str(i)
 		grid_container.add_child(block)
 	
 	tite_kubo = tite_kubo_preload.instantiate()
