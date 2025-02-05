@@ -18,24 +18,10 @@ var inimigo : Sprite2D
 
 
 func _ready():
-	grid_container = grid_container_preload.instantiate()
-	add_child(grid_container)
-	
-	for i in range(81):
-		var block = block_node.instantiate()
-		var resource = load("res://resources/block" + str(RandomNumberGenerator.new().randi_range(1, 9)) + ".tres")
-		block.set_resource(resource)
-		
-		grid_container.add_child(block)
-	
 	tite_kubo = tite_kubo_preload.instantiate()
 	inimigo = inimigo_preload.instantiate()
 	
-	grid_container.get_child(tite_kubo.index).add_child(tite_kubo)
-	grid_container.get_child(inimigo.index).add_child(inimigo)
-	
-	change_buff()
-	change_debuff()
+	fill_grid()
 
 
 func _process(_delta):
@@ -81,6 +67,28 @@ func _process(_delta):
 		return
 
 
+func fill_grid():
+	grid_container = grid_container_preload.instantiate()
+	add_child(grid_container)
+	
+	for i in range(81):
+		var block = block_node.instantiate()
+		var resource = load("res://resources/block" + str(RandomNumberGenerator.new().randi_range(1, 9)) + ".tres")
+		block.set_resource(resource)
+		
+		grid_container.add_child(block)
+	
+	if tite_kubo.get_parent() == null:
+		grid_container.get_child(tite_kubo.index).add_child(tite_kubo)
+		grid_container.get_child(inimigo.index).add_child(inimigo)
+	else:
+		tite_kubo.reparent(grid_container.get_child(tite_kubo.index), false)
+		inimigo.reparent(grid_container.get_child(inimigo.index), false)
+	
+	change_buff()
+	change_debuff()
+
+
 func change_index(entity : Sprite2D, value : int):
 	entity.index += value
 	entity.reparent(grid_container.get_child(entity.index), false)
@@ -91,7 +99,6 @@ func change_buff():
 	buff_label.text = res.buff
 	buff_tile.set("theme_override_colors/font_color", res.color)
 	buff_tile.text = "(Tile " + res.number + ")"
-	
 
 
 func change_debuff():
@@ -107,4 +114,4 @@ func _on_button_pressed():
 		child.queue_free()
 	grid_container.reset_size()
 	
-	_ready()
+	fill_grid()
