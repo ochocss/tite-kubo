@@ -17,8 +17,8 @@ config/icon="res://assets/tite.png"
 
 [display]
 
-window/size/viewport_width=1000
-window/size/viewport_height=575
+window/size/viewport_width=1168
+window/size/viewport_height=660
 
 [input]
 

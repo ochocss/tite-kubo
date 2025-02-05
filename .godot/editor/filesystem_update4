@@ -7,3 +7,9 @@ res://tite_kubo.tscn
 res://resources/block3.tres
 res://resources/block6.tres
 res://grid_container.tscn
+res://scenes/grid_container.tscn
+res://scenes/root.tscn
+res://scenes/block.tscn
+res://scenes/tite_kubo.tscn
+res://scenes/inimigo.tscn
+res://scripts/root.gd

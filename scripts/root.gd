@@ -1,9 +1,16 @@
 extends Control
 
-@onready var grid_container_preload = preload("res://grid_container.tscn")
-@onready var block_node = preload("res://block.tscn")
-@onready var tite_kubo_preload = preload("res://tite_kubo.tscn")
-@onready var inimigo_preload = preload("res://inimigo.tscn")
+@onready var buff_label = $VBoxContainer/HBoxContainer2/BuffLabel
+@onready var buff_tile = $VBoxContainer/HBoxContainer2/BuffTile
+
+@onready var debuff_label = $VBoxContainer/HBoxContainer/DebuffLabel
+@onready var debuff_tile = $VBoxContainer/HBoxContainer/DebuffTile
+
+
+@onready var grid_container_preload = preload("res://scenes/grid_container.tscn")
+@onready var block_node = preload("res://scenes/block.tscn")
+@onready var tite_kubo_preload = preload("res://scenes/tite_kubo.tscn")
+@onready var inimigo_preload = preload("res://scenes/inimigo.tscn")
 
 var grid_container : GridContainer
 var tite_kubo : Sprite2D
@@ -32,40 +39,51 @@ func _ready():
 	
 	grid_container.get_child(tite_kubo.index).add_child(tite_kubo)
 	grid_container.get_child(inimigo.index).add_child(inimigo)
+	
+	change_buff()
+	change_debuff()
 
 
 func _process(_delta):
 	if Input.is_action_just_pressed("tite_up") && tite_kubo.index > 8 && tite_kubo.index-9 != inimigo.index:
 		change_index(tite_kubo, -9)
+		change_buff()
 		return
 	
 	if Input.is_action_just_pressed("tite_down") && tite_kubo.index < 71 && tite_kubo.index+9 != inimigo.index:
 		change_index(tite_kubo, 9)
+		change_buff()
 		return
 	
 	if Input.is_action_just_pressed("tite_left") && tite_kubo.index % 9 != 0 && tite_kubo.index-1 != inimigo.index:
 		change_index(tite_kubo, -1)
+		change_buff()
 		return
 	
 	if Input.is_action_just_pressed("tite_right") && tite_kubo.index % 9 != 8 && tite_kubo.index+1 != inimigo.index:
 		change_index(tite_kubo, 1)
+		change_buff()
 		return
 	
 	
 	if Input.is_action_just_pressed("inimigo_up") && inimigo.index > 8 && inimigo.index-9 != tite_kubo.index:
 		change_index(inimigo, -9)
+		change_debuff()
 		return
 	
 	if Input.is_action_just_pressed("inimigo_down") && inimigo.index < 71 && inimigo.index+9 != tite_kubo.index:
 		change_index(inimigo, 9)
+		change_debuff()
 		return
 	
 	if Input.is_action_just_pressed("inimigo_left") && inimigo.index % 9 != 0 && inimigo.index-1 != tite_kubo.index:
 		change_index(inimigo, -1)
+		change_debuff()
 		return
 	
 	if Input.is_action_just_pressed("inimigo_right") && inimigo.index % 9 != 8 && inimigo.index+1 != tite_kubo.index:
 		change_index(inimigo, 1)
+		change_debuff()
 		return
 
 
@@ -75,11 +93,18 @@ func change_index(entity : Sprite2D, value : int):
 
 
 func change_buff():
-	pass
+	var res : BlockResource = grid_container.get_child(tite_kubo.index).resource
+	buff_label.text = res.buff
+	buff_tile.set("theme_override_colors/font_color", res.color)
+	buff_tile.text = "(Tile " + res.number + ")"
+	
 
 
 func change_debuff():
-	pass
+	var res : BlockResource = grid_container.get_child(inimigo.index).resource
+	debuff_label.text = res.debuff
+	debuff_tile.set("theme_override_colors/font_color", res.color)
+	debuff_tile.text = "(Tile " + res.number + ")"
 
 
 func _on_button_pressed():

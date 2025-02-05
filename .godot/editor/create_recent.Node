@@ -1,7 +1,7 @@
-Control
-Label
-VBoxContainer
 HBoxContainer
+Label
+Control
+VBoxContainer
 Sprite2D
 Button
 Area2D
