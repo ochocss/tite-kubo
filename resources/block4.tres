@@ -1,0 +1,10 @@
+[gd_resource type="Resource" script_class="BlockResource" load_steps=2 format=3 uid="uid://cwv6t2ngom55"]
+
+[ext_resource type="Script" path="res://block_resource.gd" id="1_faenq"]
+
+[resource]
+script = ExtResource("1_faenq")
+number = "4"
+color = Color(1, 1, 0, 1)
+buff = "Barreira 2"
+debuff = "Surdo"

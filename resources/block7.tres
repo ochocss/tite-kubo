@@ -1,0 +1,10 @@
+[gd_resource type="Resource" script_class="BlockResource" load_steps=2 format=3 uid="uid://bw4nbxk1313je"]
+
+[ext_resource type="Script" path="res://block_resource.gd" id="1_613ok"]
+
+[resource]
+script = ExtResource("1_613ok")
+number = "7"
+color = Color(0.370365, 0.370364, 0.370364, 1)
+buff = "Barreira 3"
+debuff = "Condenado"

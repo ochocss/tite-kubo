@@ -1,0 +1,10 @@
+[gd_resource type="Resource" script_class="BlockResource" load_steps=2 format=3 uid="uid://s15npo83n8ps"]
+
+[ext_resource type="Script" path="res://block_resource.gd" id="1_16qqe"]
+
+[resource]
+script = ExtResource("1_16qqe")
+number = "5"
+color = Color(0.576, 0.439, 0.859, 1)
+buff = "Acerto 2"
+debuff = "Lento"

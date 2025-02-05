@@ -1,0 +1,10 @@
+[gd_resource type="Resource" script_class="BlockResource" load_steps=2 format=3 uid="uid://8j0hintg7ytw"]
+
+[ext_resource type="Script" path="res://block_resource.gd" id="1_aa5dj"]
+
+[resource]
+script = ExtResource("1_aa5dj")
+number = "9"
+color = Color(1, 1, 1, 1)
+buff = "Classe de Armadura 3"
+debuff = "Caído"

@@ -1,0 +1,7 @@
+[gd_scene format=3 uid="uid://ca3t0aa4bj8ij"]
+
+[node name="GridContainer" type="GridContainer"]
+anchors_preset = 9
+anchor_bottom = 1.0
+grow_vertical = 2
+columns = 9
