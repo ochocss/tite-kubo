@@ -7,4 +7,6 @@ script = ExtResource("1_16qqe")
 number = "5"
 color = Color(0.576, 0.439, 0.859, 1)
 buff = "Acerto 2"
+buff_description = "Aumenta a chance de dano acerto. Adicione +3 na rolagem de ataque."
 debuff = "Lento"
+debuff_description = "Toda forma de movimento do personagem é reduzida pela metade e ele não pode usar a ação disparar."

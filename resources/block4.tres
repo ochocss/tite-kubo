@@ -7,4 +7,6 @@ script = ExtResource("1_faenq")
 number = "4"
 color = Color(1, 1, 0, 1)
 buff = "Barreira 2"
+buff_description = "A barreira bloqueia dois ataques."
 debuff = "Surdo"
+debuff_description = "O personagem falha em qualquer teste envolvendo a audição e sofre -5 em rolagens de iniciativa."

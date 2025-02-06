@@ -7,4 +7,6 @@ script = ExtResource("1_266pb")
 number = "8"
 color = Color(0.498, 1, 0, 1)
 buff = "Acerto 3"
+buff_description = "Aumenta a chance de dano acerto. Adicione +4 na rolagem de ataque."
 debuff = "Confuso"
+debuff_description = "Um personagem confuso se comporta da maneira aleatória. Role 1d6 no início dos seus turnos: 1) Movimenta-se em uma direção escolhida por uma rolagem de 1d8; 2-3) Não pode fazer ações; 4-5) Usa a arma que estiver empunhando para atacar a criatura mais próxima, ou a si mesmo se estiver sozinho, apenas rolando o dano nesse caso; 6) A condição termina, e pode agir normalmente."

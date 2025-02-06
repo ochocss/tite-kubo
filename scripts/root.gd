@@ -2,9 +2,11 @@ extends Control
 
 @onready var buff_label = $VBoxContainer/HBoxContainer2/BuffLabel
 @onready var buff_tile = $VBoxContainer/HBoxContainer2/BuffTile
+@onready var buff_description = $VBoxContainer/BuffDescription
 
 @onready var debuff_label = $VBoxContainer/HBoxContainer/DebuffLabel
 @onready var debuff_tile = $VBoxContainer/HBoxContainer/DebuffTile
+@onready var debuff_description = $VBoxContainer/DebuffDescription
 
 
 @onready var grid_container_preload = preload("res://scenes/grid_container.tscn")
@@ -98,14 +100,17 @@ func change_buff():
 	var res : BlockResource = grid_container.get_child(tite_kubo.index).resource
 	buff_label.text = res.buff
 	buff_tile.set("theme_override_colors/font_color", res.color)
-	buff_tile.text = "(Tile " + res.number + ")"
+	buff_tile.text = "Tile " + res.number
+	buff_description.text = res.buff_description
+	
 
 
 func change_debuff():
 	var res : BlockResource = grid_container.get_child(inimigo.index).resource
 	debuff_label.text = res.debuff
 	debuff_tile.set("theme_override_colors/font_color", res.color)
-	debuff_tile.text = "(Tile " + res.number + ")"
+	debuff_tile.text = "Tile " + res.number
+	debuff_description.text = res.debuff_description
 
 
 func _on_button_pressed():

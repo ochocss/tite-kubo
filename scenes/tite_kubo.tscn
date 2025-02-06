@@ -7,6 +7,6 @@
 light_mask = 3
 visibility_layer = 3
 position = Vector2(31.375, 31.875)
-scale = Vector2(0.405738, 0.45)
+scale = Vector2(0.602459, 0.503333)
 texture = ExtResource("1_bt280")
 script = ExtResource("2_t1f8o")

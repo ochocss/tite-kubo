@@ -1,6 +1,7 @@
-[gd_scene load_steps=2 format=3 uid="uid://cqp6e4ijrsv3a"]
+[gd_scene load_steps=3 format=3 uid="uid://cqp6e4ijrsv3a"]
 
 [ext_resource type="Script" path="res://scripts/root.gd" id="1_n1vci"]
+[ext_resource type="Texture2D" uid="uid://dipdo28vriack" path="res://assets/shuffle.png" id="2_h8n5y"]
 
 [node name="Root" type="Control"]
 layout_mode = 3
@@ -25,42 +26,55 @@ grow_horizontal = 0
 grow_vertical = 2
 
 [node name="Button" type="Button" parent="VBoxContainer"]
-custom_minimum_size = Vector2(180, 80)
+custom_minimum_size = Vector2(180, 90)
 layout_mode = 2
 theme_override_font_sizes/font_size = 36
+theme_override_icons/icon = ExtResource("2_h8n5y")
 text = "Shuffle"
 
 [node name="Control" type="Control" parent="VBoxContainer"]
 layout_mode = 2
 size_flags_vertical = 3
 
-[node name="Control3" type="Control" parent="VBoxContainer"]
+[node name="Label" type="Label" parent="VBoxContainer"]
 layout_mode = 2
-size_flags_vertical = 3
+theme_override_font_sizes/font_size = 24
+text = "Tite Kubo - W, A, S, D
+Inimigo - Up, Left, Down, Right"
 
-[node name="Control4" type="Control" parent="VBoxContainer"]
+[node name="Control3" type="Control" parent="VBoxContainer"]
 layout_mode = 2
 size_flags_vertical = 3
 
 [node name="HBoxContainer2" type="HBoxContainer" parent="VBoxContainer"]
 layout_mode = 2
 
-[node name="BuffLabel" type="Label" parent="VBoxContainer/HBoxContainer2"]
-layout_mode = 2
-theme_override_colors/font_color = Color(0, 0.629441, 0.00498538, 1)
-theme_override_font_sizes/font_size = 32
-text = "Generic Buff"
-
-[node name="Control" type="Control" parent="VBoxContainer/HBoxContainer2"]
-custom_minimum_size = Vector2(40, 0)
-layout_mode = 2
-size_flags_vertical = 3
-
 [node name="BuffTile" type="Label" parent="VBoxContainer/HBoxContainer2"]
 layout_mode = 2
 size_flags_horizontal = 8
 theme_override_colors/font_color = Color(0, 0, 0, 1)
-theme_override_font_sizes/font_size = 28
+theme_override_font_sizes/font_size = 22
+text = "X"
+
+[node name="Control" type="Control" parent="VBoxContainer/HBoxContainer2"]
+custom_minimum_size = Vector2(20, 0)
+layout_mode = 2
+size_flags_vertical = 3
+
+[node name="BuffLabel" type="Label" parent="VBoxContainer/HBoxContainer2"]
+custom_minimum_size = Vector2(300, 0)
+layout_mode = 2
+theme_override_colors/font_color = Color(0, 0.629441, 0.00498538, 1)
+theme_override_font_sizes/font_size = 36
+text = "Buff"
+
+[node name="BuffDescription" type="Label" parent="VBoxContainer"]
+custom_minimum_size = Vector2(300, 0)
+layout_mode = 2
+theme_override_colors/font_color = Color(0, 0.631373, 0.00392157, 1)
+theme_override_font_sizes/font_size = 14
+text = "Buff description"
+autowrap_mode = 3
 
 [node name="Control2" type="Control" parent="VBoxContainer"]
 layout_mode = 2
@@ -69,21 +83,31 @@ size_flags_vertical = 3
 [node name="HBoxContainer" type="HBoxContainer" parent="VBoxContainer"]
 layout_mode = 2
 
-[node name="DebuffLabel" type="Label" parent="VBoxContainer/HBoxContainer"]
-layout_mode = 2
-theme_override_colors/font_color = Color(0.967119, 0, 0.0945349, 1)
-theme_override_font_sizes/font_size = 32
-text = "Generic Buff"
-
-[node name="Control" type="Control" parent="VBoxContainer/HBoxContainer"]
-custom_minimum_size = Vector2(40, 0)
-layout_mode = 2
-size_flags_vertical = 3
-
 [node name="DebuffTile" type="Label" parent="VBoxContainer/HBoxContainer"]
 layout_mode = 2
 size_flags_horizontal = 8
 theme_override_colors/font_color = Color(0, 0, 0, 1)
-theme_override_font_sizes/font_size = 28
+theme_override_font_sizes/font_size = 22
+text = "X"
+
+[node name="Control" type="Control" parent="VBoxContainer/HBoxContainer"]
+custom_minimum_size = Vector2(20, 0)
+layout_mode = 2
+size_flags_vertical = 3
+
+[node name="DebuffLabel" type="Label" parent="VBoxContainer/HBoxContainer"]
+custom_minimum_size = Vector2(300, 0)
+layout_mode = 2
+theme_override_colors/font_color = Color(0.999727, 0.169726, 0.170132, 1)
+theme_override_font_sizes/font_size = 36
+text = "Debuff"
+
+[node name="DebuffDescription" type="Label" parent="VBoxContainer"]
+custom_minimum_size = Vector2(300, 0)
+layout_mode = 2
+theme_override_colors/font_color = Color(1, 0.168627, 0.168627, 1)
+theme_override_font_sizes/font_size = 14
+text = "Debuff description"
+autowrap_mode = 3
 
 [connection signal="pressed" from="VBoxContainer/Button" to="." method="_on_button_pressed"]

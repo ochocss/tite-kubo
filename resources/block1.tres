@@ -5,6 +5,8 @@
 [resource]
 script = ExtResource("1_2q2an")
 number = "1"
-color = Color(1, 0, 0, 1)
+color = Color(0.940361, 1.42708e-05, 3.27289e-06, 1)
 buff = "Barreira 1"
+buff_description = "Adiciona uma mini barreira de cubos que bloqueia um único ataque."
 debuff = "Desorientado"
+debuff_description = "É incapaz de utilizar reações."

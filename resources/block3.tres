@@ -7,4 +7,6 @@ script = ExtResource("1_8g7pr")
 number = "3"
 color = Color(0.529, 0.808, 0.922, 1)
 buff = "Classe de Armadura 1"
+buff_description = "Aumenta a CA do aliado ou a própria. Adicione +2 na CA."
 debuff = "Desprevenido"
+debuff_description = "O alvo sofre -5 na CA e em Reflexos. Você fica desprevenido contra inimigos que não possa ver."

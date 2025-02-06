@@ -5,6 +5,8 @@
 [resource]
 script = ExtResource("1_quw8y")
 number = "6"
-color = Color(0, 0.615316, 0.615316, 1)
+color = Color(1.05888e-06, 0.478277, 0.478277, 1)
 buff = "Classe de Armadura 2"
+buff_description = "Aumenta a CA do aliado ou a própria. Adicione +3 na CA."
 debuff = "Enredado"
+debuff_description = "Tem o deslocamento reduzido à metade, não pode usar a ação disparar e recebe -2 na sua CA e em rolagens de ataque."

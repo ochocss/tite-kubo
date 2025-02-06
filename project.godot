@@ -66,3 +66,4 @@ inimigo_right={
 [rendering]
 
 renderer/rendering_method="mobile"
+environment/defaults/default_clear_color=Color(0.144062, 0.144063, 0.144062, 1)

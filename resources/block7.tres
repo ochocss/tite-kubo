@@ -7,4 +7,6 @@ script = ExtResource("1_613ok")
 number = "7"
 color = Color(0.370365, 0.370364, 0.370364, 1)
 buff = "Barreira 3"
+buff_description = "A barreira bloqueia três ataques."
 debuff = "Condenado"
+debuff_description = "Um personagem condenado tem o custo em energia/vigor de todas as suas habilidades aumentado em 1."

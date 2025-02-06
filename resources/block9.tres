@@ -7,4 +7,6 @@ script = ExtResource("1_aa5dj")
 number = "9"
 color = Color(1, 1, 1, 1)
 buff = "Classe de Armadura 3"
+buff_description = "Aumenta a CA do aliado ou a própria. Adicione +5 na CA."
 debuff = "Caído"
+debuff_description = "O personagem sofre -5 em ataques corpo-a-corpo e seu movimento é reduzido a 1,5 metros. Além disso, sofre -5 de CA contra-ataques corpo-a-corpo, mas recebe +5 contra-ataques a distância."

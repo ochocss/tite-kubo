@@ -7,4 +7,6 @@ script = ExtResource("1_xqyx6")
 number = "2"
 color = Color(0, 0.392, 0, 1)
 buff = "Acerto 1"
+buff_description = "Aumenta a chance de acerto. Adicione +2 na rolagem de ataque."
 debuff = "Enjoado"
+debuff_description = "Um personagem enjoado só pode realizar uma ação comum ou se movimentar (não ambos) por rodada."
