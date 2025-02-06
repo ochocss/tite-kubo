@@ -14,6 +14,8 @@ extends Control
 @onready var tite_kubo_preload = preload("res://scenes/tite_kubo.tscn")
 @onready var inimigo_preload = preload("res://scenes/inimigo.tscn")
 
+@onready var rng = RandomNumberGenerator.new()
+
 var grid_container : GridContainer
 var tite_kubo : Sprite2D
 var inimigo : Sprite2D
@@ -72,10 +74,12 @@ func _process(_delta):
 func fill_grid():
 	grid_container = grid_container_preload.instantiate()
 	add_child(grid_container)
+	rng.randomize()
 	
 	for i in range(81):
 		var block = block_node.instantiate()
-		var resource = load("res://resources/block" + str(RandomNumberGenerator.new().randi_range(1, 9)) + ".tres")
+		
+		var resource = load("res://resources/block" + str(rng.randi_range(1, 9)) + ".tres")
 		block.set_resource(resource)
 		
 		grid_container.add_child(block)
