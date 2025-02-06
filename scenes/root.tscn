@@ -103,7 +103,7 @@ theme_override_font_sizes/font_size = 36
 text = "Debuff"
 
 [node name="DebuffDescription" type="Label" parent="VBoxContainer"]
-custom_minimum_size = Vector2(300, 0)
+custom_minimum_size = Vector2(300, 135)
 layout_mode = 2
 theme_override_colors/font_color = Color(1, 0.168627, 0.168627, 1)
 theme_override_font_sizes/font_size = 14
